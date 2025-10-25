@@ -2,7 +2,7 @@ const GoogleMaps = ({ locationParam = "tangerang" }) => {
   const encoded = encodeURIComponent(locationParam);
   const url = `https://www.google.com/maps?q=${encoded}&output=embed`;
   return (
-    <div className=" shadowBox overflow-hidden rounded-lg p-2 mb-5">
+    <div className=" overflow-hidden rounded-lg p-2 ">
       <iframe
         src={url}
         width="100%"
