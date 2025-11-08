@@ -3,6 +3,18 @@ import Layout from "../layout/layout";
 import { motion } from "motion/react";
 
 const Contact = () => {
+  const animateContact = {
+    initial: { opacity: 0, scale: 0 },
+    animate: (index) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.2 * index,
+        duration: 0.5,
+      },
+    }),
+  };
+
   return (
     <Layout>
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-white">
@@ -58,12 +70,17 @@ const Contact = () => {
             <motion.div
               key={i}
               className="bg-[rgba(255,255,255,0.08)] backdrop-blur-md border border-[rgba(147,197,253,0.3)] rounded-lg p-6 flex items-center gap-4 transition-all"
+              variants={animateContact}
+              initial="initial"
+              whileInView="animate"
+              custom={i}
               whileHover={{
                 scale: 1.05,
                 boxShadow:
                   "0 0 25px rgba(168,85,247,0.6), 0 0 60px rgba(236,72,153,0.4)",
                 border: "1px solid rgba(236,72,153,0.5)",
               }}
+              viewport={{ once: true }}
             >
               <div
                 className={`${color} text-3xl drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]`}

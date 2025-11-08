@@ -1,52 +1,7 @@
 import Layout from "../layout/layout";
 import { motion } from "framer-motion";
-
+import { projects } from "../../data/data";
 const Project = () => {
-  const projects = [
-    {
-      title: "Sistem Monitoring Tugas Luar Pegawai",
-      description:
-        "A web-based system for managing and monitoring employee assignments efficiently. Built with Laravel and React, featuring secure role-based access and dynamic PDF reports.",
-      tech: ["Laravel", "React", "MySQL", "TailwindCSS"],
-      link: "#",
-    },
-    {
-      title: "Personal Portfolio Website",
-      description:
-        "An interactive and visually appealing portfolio showcasing my projects and skills as a web developer. Designed with modern animations and responsive layouts.",
-      tech: ["React", "Framer Motion", "TailwindCSS"],
-      link: "#",
-    },
-    {
-      title: "API Integration Dashboard",
-      description:
-        "A data visualization dashboard integrating multiple APIs using Axios, presenting analytics and performance metrics with Recharts.",
-      tech: ["Next.js", "Axios", "Recharts"],
-      link: "#",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A minimalist task management application to organize and track personal productivity. Includes authentication and real-time updates.",
-      tech: ["Node.js", "Express", "React", "MongoDB"],
-      link: "#",
-    },
-    {
-      title: "E-Commerce Admin Panel",
-      description:
-        "An admin dashboard for managing products, orders, and users in an online store with clean UI and secure CRUD operations.",
-      tech: ["Laravel", "Vue.js", "MySQL"],
-      link: "#",
-    },
-    {
-      title: "Chat Application",
-      description:
-        "A real-time chat app with private and group messaging features, using WebSocket for instant communication.",
-      tech: ["React", "Socket.io", "Node.js"],
-      link: "#",
-    },
-  ];
-
   return (
     <Layout>
       <section className="relative min-h-screen overflow-hidden flex flex-col items-center text-white px-6 py-20">

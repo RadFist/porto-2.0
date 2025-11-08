@@ -1,18 +1,32 @@
 import Layout from "../layout/layout";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
+import { skillSet } from "../../data/data.js";
 
 const Index = () => {
+  const animateSkill = {
+    initial: { opacity: 0, scale: 1.2 },
+    animate: (index) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.25 * index,
+      },
+    }),
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
       <section className="min-h-screen flex justify-center items-center px-15 py-10">
         <motion.div
-          className="rounded-xl flex flex-col md:flex-row justify-between items-center px-20 md:px-20 py-10 bg-[rgba(255,255,255,0.08)] backdrop-blur-md border sshadow-[0_0_40px_rgba(139,92,246,0.2)] transition-all duration-500"
+          className="rounded-xl flex flex-col md:flex-row justify-between items-center px-20 md:px-20 py-10 bg-[rgba(255,255,255,0.08)] backdrop-blur-md border shadow-[0_0_40px_rgba(139,92,246,0.2)] transition-all duration-500"
           initial={{
+            opacity: 0,
             border: "2px solid rgba(56, 189, 248, 0.8)",
             boxShadow: "0 0 15px rgba(56, 189, 248, 0.3)",
           }}
+          animate={{ opacity: 1 }}
           whileHover={{
             border: "2px solid rgba(168, 85, 247, 0.9)",
             boxShadow: `
@@ -22,7 +36,9 @@ const Index = () => {
       `,
             scale: 1.01,
           }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{
+            duration: 0.3,
+          }}
         >
           {/* Teks kiri */}
           <div className="space-y-6 md:w-1/2">
@@ -83,7 +99,12 @@ const Index = () => {
           {/* === FRONT-END === */}
           <motion.div
             className="flex-1 p-6 rounded-xl bg-[rgba(255,255,255,0.08)] backdrop-blur-md"
-            initial={{ border: "2px solid rgba(56,189,248,0.5)" }}
+            initial={{
+              border: "2px solid rgba(56,189,248,0.5)",
+              opacity: 0,
+              y: 100,
+            }}
+            whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
               border: "2px solid rgba(168,85,247,0.9)",
               boxShadow: `
@@ -97,28 +118,32 @@ const Index = () => {
             <h2 className="text-3xl font-semibold text-cyan-400 mb-6 text-left">
               Front-End
             </h2>
+
             <ul className="grid grid-cols-2 gap-3 text-left">
-              {[
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "React.js",
-                "Tailwind CSS",
-                "Framer Motion",
-              ].map((skill) => (
-                <li
-                  key={skill}
+              {skillSet.frontEnd.map((skill, index) => (
+                <motion.li
                   className="px-3 py-2 bg-[rgba(168,85,247,0.15)] rounded-lg text-gray-100 text-sm font-medium hover:bg-[rgba(168,85,247,0.3)] transition"
+                  key={skill}
+                  variants={animateSkill}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={index}
                 >
                   {skill}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
 
+          {/*  === BACK-END ===  */}
           <motion.div
             className="flex-1 p-6 rounded-xl bg-[rgba(255,255,255,0.08)] backdrop-blur-md"
-            initial={{ border: "2px solid rgba(56,189,248,0.5)" }}
+            initial={{
+              border: "2px solid rgba(56,189,248,0.5)",
+              opacity: 0,
+              y: 100,
+            }}
+            whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
               border: "2px solid rgba(168,85,247,0.9)",
               boxShadow: `
@@ -134,27 +159,30 @@ const Index = () => {
               Back-End
             </h2>
             <ul className="grid grid-cols-2 gap-3 text-left">
-              {[
-                "PHP",
-                "Laravel",
-                "Node.js",
-                "Express.js",
-                "REST API",
-                "MySQL",
-              ].map((skill) => (
-                <li
-                  key={skill}
+              {skillSet.backEnd.map((skill, index) => (
+                <motion.li
                   className="px-3 py-2 bg-[rgba(236,72,153,0.15)] rounded-lg text-gray-100 text-sm font-medium hover:bg-[rgba(236,72,153,0.3)] transition"
+                  key={skill}
+                  variants={animateSkill}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={index}
                 >
                   {skill}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
 
+          {/*  === Tools ===  */}
           <motion.div
             className="flex-1 p-6 rounded-xl bg-[rgba(255,255,255,0.08)] backdrop-blur-md"
-            initial={{ border: "2px solid rgba(56,189,248,0.5)" }}
+            initial={{
+              border: "2px solid rgba(56,189,248,0.5)",
+              opacity: 0,
+              y: 100,
+            }}
+            whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
               border: "2px solid rgba(168,85,247,0.9)",
               boxShadow: `
@@ -170,20 +198,17 @@ const Index = () => {
               Tools
             </h2>
             <ul className="grid grid-cols-2 gap-3 text-left">
-              {[
-                "Git & GitHub",
-                "VS Code",
-                "Postman",
-                "Figma",
-                "XAMPP",
-                "Vercel",
-              ].map((tool) => (
-                <li
-                  key={tool}
+              {skillSet.Tools.map((tool, index) => (
+                <motion.li
                   className="px-3 py-2 bg-[rgba(56,189,248,0.15)] rounded-lg text-gray-100 text-sm font-medium hover:bg-[rgba(56,189,248,0.3)] transition"
+                  key={tool}
+                  variants={animateSkill}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={index}
                 >
                   {tool}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>

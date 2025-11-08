@@ -3,10 +3,10 @@ import Layout from "../layout/layout";
 const About = () => {
   return (
     <Layout>
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-gray-100">
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-12 max-w-6xl bg-[rgba(255,255,255,0.05)] backdrop-blur-md rounded-xl border border-[rgba(168,85,247,0.3)] shadow-[0_0_30px_rgba(168,85,247,0.2)] p-10 transition-all duration-500 hover:shadow-[0_0_60px_rgba(168,85,247,0.4)]">
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-10 pt-12 text-gray-100">
+        <div className="flex flex-col items-center justify-center gap-12 max-w-4xl bg-[rgba(255,255,255,0.05)] backdrop-blur-md rounded-xl border border-[rgba(168,85,247,0.3)] shadow-[0_0_30px_rgba(168,85,247,0.2)] py-10 transition-all duration-500 hover:shadow-[0_0_60px_rgba(168,85,247,0.4)]">
           {/* Foto profil */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="flex justify-center">
             <img
               src="https://via.placeholder.com/200" // ganti nanti dengan fotomu
               alt="Profile"
@@ -15,7 +15,7 @@ const About = () => {
           </div>
 
           {/* Deskripsi tentang diri */}
-          <div className="md:w-1/2 text-center md:text-left">
+          <div className="md:w-1/2 text-center ">
             <h1 className="text-4xl font-bold text-cyan-400 mb-4 drop-shadow-[0_0_10px_rgba(56,189,248,0.6)]">
               About Me
             </h1>
