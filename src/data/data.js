@@ -16,8 +16,13 @@ export const projects = [
     title: "Sistem Monitoring Tugas Luar Pegawai",
     description:
       "A web-based system for managing and monitoring employee assignments efficiently. Built with Laravel and React, featuring secure role-based access and dynamic PDF reports.",
-    tech: ["Laravel", "React", "MySQL", "TailwindCSS"],
+    tech: ["Node.js", "Express", "React", "MySQL", "Socket.io"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Monitoring+1",
+      "https://via.placeholder.com/600x400?text=Monitoring+2",
+      "https://via.placeholder.com/600x400?text=Monitoring+3",
+    ],
   },
   {
     title: "Personal Portfolio Website",
@@ -25,6 +30,11 @@ export const projects = [
       "An interactive and visually appealing portfolio showcasing my projects and skills as a web developer. Designed with modern animations and responsive layouts.",
     tech: ["React", "Framer Motion", "TailwindCSS"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Portfolio+1",
+      "https://via.placeholder.com/600x400?text=Portfolio+2",
+      "https://via.placeholder.com/600x400?text=Portfolio+3",
+    ],
   },
   {
     title: "API Integration Dashboard",
@@ -32,6 +42,11 @@ export const projects = [
       "A data visualization dashboard integrating multiple APIs using Axios, presenting analytics and performance metrics with Recharts.",
     tech: ["Next.js", "Axios", "Recharts"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Dashboard+1",
+      "https://via.placeholder.com/600x400?text=Dashboard+2",
+      "https://via.placeholder.com/600x400?text=Dashboard+3",
+    ],
   },
   {
     title: "Task Management App",
@@ -39,6 +54,11 @@ export const projects = [
       "A minimalist task management application to organize and track personal productivity. Includes authentication and real-time updates.",
     tech: ["Node.js", "Express", "React", "MongoDB"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Task+1",
+      "https://via.placeholder.com/600x400?text=Task+2",
+      "https://via.placeholder.com/600x400?text=Task+3",
+    ],
   },
   {
     title: "E-Commerce Admin Panel",
@@ -46,6 +66,11 @@ export const projects = [
       "An admin dashboard for managing products, orders, and users in an online store with clean UI and secure CRUD operations.",
     tech: ["Laravel", "Vue.js", "MySQL"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Ecommerce+1",
+      "https://via.placeholder.com/600x400?text=Ecommerce+2",
+      "https://via.placeholder.com/600x400?text=Ecommerce+3",
+    ],
   },
   {
     title: "Chat Application",
@@ -53,5 +78,10 @@ export const projects = [
       "A real-time chat app with private and group messaging features, using WebSocket for instant communication.",
     tech: ["React", "Socket.io", "Node.js"],
     link: "#",
+    images: [
+      "https://via.placeholder.com/600x400?text=Chat+1",
+      "https://via.placeholder.com/600x400?text=Chat+2",
+      "https://via.placeholder.com/600x400?text=Chat+3",
+    ],
   },
 ];

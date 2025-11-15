@@ -1,7 +1,24 @@
 import Layout from "../layout/layout";
 import { motion } from "framer-motion";
 import { projects } from "../../data/data";
+import ProjectModal from "../../components/modal";
+import { useState } from "react";
+
 const Project = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  function handlerShowModal(e, proj) {
+    e.preventDefault();
+    setSelectedProject(proj);
+    setIsOpen(true);
+  }
+  function handlerCloseModal(e) {
+    e.preventDefault();
+    setIsOpen(false);
+    setSelectedProject(null);
+  }
+
   return (
     <Layout>
       <section className="relative min-h-screen overflow-hidden flex flex-col items-center text-white px-6 py-20">
@@ -13,6 +30,12 @@ const Project = () => {
         >
           My <span className="text-blue-200">Projects</span>
         </motion.h1>
+
+        <ProjectModal
+          isOpen={isOpen}
+          data={selectedProject}
+          close={handlerCloseModal}
+        />
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full z-10"
@@ -42,22 +65,24 @@ const Project = () => {
                   {proj.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {proj.tech.map((t, i) => (
+                  {proj.tech.map((tech, i) => (
                     <span
                       key={i}
                       className="bg-white/20 text-sm px-3 py-1 rounded-full"
                     >
-                      {t}
+                      {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <a
+
+              <button
                 href={proj.link}
+                onClick={(e) => handlerShowModal(e, proj)}
                 className="text-purple-200 hover:text-white underline font-medium transition-colors duration-200"
               >
-                View Project →
-              </a>
+                Detail →
+              </button>
             </motion.div>
           ))}
         </motion.div>
