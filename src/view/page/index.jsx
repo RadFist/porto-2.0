@@ -81,7 +81,7 @@ const Index = () => {
           {/* Foto kanan */}
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <img
-              src="../../../public/profile.jpg"
+              src="../../../public/profile.webp"
               alt="Profile"
               className="rounded-full shadow-[0_0_30px_rgba(168,85,247,0.4)] w-64 h-64 object-cover object-top"
             />
