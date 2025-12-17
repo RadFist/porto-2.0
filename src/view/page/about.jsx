@@ -8,7 +8,7 @@ const About = () => {
           {/* img profile */}
           <div className="flex justify-center">
             <img
-              src="../../../public/profile.jpg"
+              src="../../../public/profile.webp"
               alt="Profile"
               className="rounded-full shadow-[0_0_30px_rgba(139,92,246,0.4)] w-64 h-64 object-cover  object-top"
             />
