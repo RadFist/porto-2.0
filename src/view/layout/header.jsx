@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Home, User, FolderGit2, Mail, Type } from "lucide-react";
 import { hover, motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
 const Header = () => {
   // const [isOpen, setOpen] = useState(false);
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
   const itemVariants = {
     initial: {
       borderRadius: "100%",
@@ -26,6 +29,16 @@ const Header = () => {
       width: 120,
       transition: { duration: 0.3, ease: "easeInOut" },
     },
+    active: {
+      border: "3px solid #8B5CF6",
+      color: "#747bff",
+      boxShadow: `
+      0 0 20px rgba(139, 92, 246, 0.6), 
+      0 0 60px rgba(147, 197, 253, 0.4)
+    `,
+      borderRadius: "10px",
+      width: 120,
+    },
   };
 
   const textVariants = {
@@ -37,6 +50,10 @@ const Header = () => {
       opacity: 1,
       display: "block",
       transition: { duration: 0.3, ease: "easeInOut" },
+    },
+    active: {
+      opacity: 1,
+      display: "block",
     },
   };
 
@@ -53,7 +70,7 @@ const Header = () => {
             <motion.li
               className={bgMenu}
               variants={itemVariants}
-              initial="initial"
+              initial={isActive("/") ? "active" : "initial"}
               whileHover="hover"
             >
               <Link to="/" className="flex items-center gap-2 px-2">
@@ -65,7 +82,8 @@ const Header = () => {
             <motion.li
               className={bgMenu}
               variants={itemVariants}
-              initial="initial"
+              initial={isActive("/about") ? "active" : "initial"}
+              animate={isActive("/about") ? "active" : "initial"}
               whileHover="hover"
             >
               <Link to="/about" className="flex items-center gap-2 px-2">
@@ -77,7 +95,8 @@ const Header = () => {
             <motion.li
               className={bgMenu}
               variants={itemVariants}
-              initial="initial"
+              initial={isActive("/project") ? "active" : "initial"}
+              animate={isActive("/project") ? "active" : "initial"}
               whileHover="hover"
             >
               <Link to="/project" className="flex items-center gap-2 px-2">
@@ -89,7 +108,8 @@ const Header = () => {
             <motion.li
               className={bgMenu}
               variants={itemVariants}
-              initial="initial"
+              initial={isActive("/contact") ? "active" : "initial"}
+              animate={isActive("/contact") ? "active" : "initial"}
               whileHover="hover"
             >
               <Link to="/contact" className="flex items-center gap-2 px-2">

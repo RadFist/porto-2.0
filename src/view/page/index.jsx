@@ -81,9 +81,9 @@ const Index = () => {
           {/* Foto kanan */}
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF02Jj8T2t7PdkytAw42HDuuSz7yXguKn8Lg&s"
+              src="../../../public/profile.jpg"
               alt="Profile"
-              className="rounded-full shadow-[0_0_30px_rgba(168,85,247,0.4)] w-64 h-64 object-cover"
+              className="rounded-full shadow-[0_0_30px_rgba(168,85,247,0.4)] w-64 h-64 object-cover object-top"
             />
           </div>
         </motion.div>

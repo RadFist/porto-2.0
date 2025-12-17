@@ -5,12 +5,12 @@ const About = () => {
     <Layout>
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-10 pt-12 text-gray-100">
         <div className="flex flex-col items-center justify-center gap-12 max-w-4xl bg-[rgba(255,255,255,0.05)] backdrop-blur-md rounded-xl border border-[rgba(168,85,247,0.3)] shadow-[0_0_30px_rgba(168,85,247,0.2)] py-10 transition-all duration-500 hover:shadow-[0_0_60px_rgba(168,85,247,0.4)]">
-          {/* Foto profil */}
+          {/* img profile */}
           <div className="flex justify-center">
             <img
-              src="https://via.placeholder.com/200" // ganti nanti dengan fotomu
+              src="../../../public/profile.jpg"
               alt="Profile"
-              className="rounded-full shadow-[0_0_30px_rgba(139,92,246,0.4)] w-64 h-64 object-cover"
+              className="rounded-full shadow-[0_0_30px_rgba(139,92,246,0.4)] w-64 h-64 object-cover  object-top"
             />
           </div>
 
@@ -25,10 +25,10 @@ const About = () => {
                 Muhamad Rifansyah Aliyilbuni
               </span>
               , seorang lulusan <b>Teknik Informatika</b> yang memiliki
-              ketertarikan mendalam pada dunia <b>pengembangan web</b> dan{" "}
-              <b>kecerdasan buatan</b>. Saya menikmati proses belajar hal-hal
-              baru dan mencari cara agar teknologi bisa membantu meningkatkan
-              efisiensi, otomatisasi, dan kualitas hidup manusia.
+              ketertarikan mendalam pada dunia <b>pengembangan web</b>. Saya
+              menikmati proses belajar hal-hal baru dan mencari cara agar
+              teknologi bisa membantu meningkatkan efisiensi, efektif, dan
+              kualitas hidup manusia.
             </p>
             <p className="text-gray-200 mb-6 leading-relaxed">
               Selama kuliah, saya mengerjakan berbagai proyek berbasis web —
@@ -54,12 +54,11 @@ const About = () => {
               <i>2021 – 2025</i>
             </p>
             <p className="leading-relaxed">
-              Fokus studi saya meliputi pengembangan sistem berbasis web,
-              integrasi <b>AI</b>, serta keamanan data. Selama kuliah, saya
-              aktif membuat proyek dengan pendekatan modern menggunakan{" "}
-              <b>React.js</b>, <b>Laravel</b>, dan <b>API Management</b> untuk
-              mendukung efisiensi sistem serta pengalaman pengguna yang lebih
-              baik.
+              {" "}
+              Selama masa perkuliahan, saya berfokus pada projek-projek
+              pengembangan web (web development) dan juga pernah mengembangkan
+              aplikasi Android sebagai bagian dari proses pembelajaran dan
+              pengembangan keterampilan teknis saya.
             </p>
           </div>
         </div>
@@ -70,12 +69,14 @@ const About = () => {
             Interests
           </h2>
           <p className="text-gray-200 leading-relaxed">
-            Di luar dunia pemrograman, saya tertarik dengan <b>Stoikisme</b> dan{" "}
-            <b>pengembangan diri</b>. Saya juga senang mengeksplor topik seperti{" "}
-            <b>AI</b>, <b>psikologi manusia</b>, dan <b>teknologi masa depan</b>{" "}
-            — karena saya percaya, keseimbangan antara logika, kreativitas, dan
-            filosofi dapat membentuk cara pikir yang lebih matang, produktif,
-            dan bernilai.
+            Di luar dunia pemrograman, saya memiliki ketertarikan pada{" "}
+            <span className="font-semibold">Gaming</span>
+            dan <span className="font-semibold">Musik</span>. Melalui gaming,
+            saya belajar melatih fokus, strategi, serta kemampuan mengambil
+            keputusan secara cepat. Sementara itu, musik menjadi sarana bagi
+            saya untuk menjaga keseimbangan emosi, meningkatkan konsentrasi, dan
+            membantu saya tetap produktif, terutama saat mengerjakan proyek atau
+            mempelajari hal-hal baru.
           </p>
         </div>
       </section>

@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 
 export default function ProjectModal({ data, isOpen, close }) {
   const dummyImages = [
-    "https://via.placeholder.com/600x400?text=Image+1",
-    "https://via.placeholder.com/600x400?text=Image+2",
-    "https://via.placeholder.com/600x400?text=Image+3",
+    {
+      image: "https://via.placeholder.com/600x400?text=Image+1",
+      title: "Preview Image",
+    },
   ];
 
   // Pakai gambar dari project atau dummy
@@ -41,7 +42,11 @@ export default function ProjectModal({ data, isOpen, close }) {
         {/* Close Button */}
         <button
           onClick={(e) => close(e)}
-          className="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl font-bold"
+          className="  absolute top-3 right-3 text-gray-600
+           hover:text-black text-2xl font-bold z-10
+           bg-gray-200 rounded-full
+           w-8 h-8 flex items-center justify-center
+           md:bg-transparent md:rounded-none md:w-auto md:h-auto md:flex-none"
         >
           ✕
         </button>
@@ -49,28 +54,36 @@ export default function ProjectModal({ data, isOpen, close }) {
         {/* 2 Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT — IMAGE + CAROUSEL */}
-          <div className="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
-            <img
-              src={images[index]}
-              alt="Portfolio"
-              className="object-cover w-full h-full"
-            />
+          <div>
+            <div className="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+              <img
+                src={images[index].image}
+                alt={images[index].title}
+                className="w-full h-full object-contain"
+              />
 
-            {/* Prev Button */}
-            <button
-              onClick={prev}
-              className="absolute left-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
-            >
-              ‹
-            </button>
+              {/* Prev Button */}
+              <button
+                onClick={prev}
+                className="absolute left-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
+              >
+                ‹
+              </button>
 
-            {/* Next Button */}
-            <button
-              onClick={next}
-              className="absolute right-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
-            >
-              ›
-            </button>
+              {/* Next Button */}
+              <button
+                onClick={next}
+                className="absolute right-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
+              >
+                ›
+              </button>
+            </div>
+
+            <div className="flex items-center justify-center text-black pt-1">
+              <p className="text-center text-sm text-gray-600 mt-2">
+                {images[index].title}
+              </p>
+            </div>
           </div>
 
           {/* RIGHT — TEXT */}
@@ -94,6 +107,24 @@ export default function ProjectModal({ data, isOpen, close }) {
                 ))}
               </div>
             )}
+            {/* Link Buttons */}
+            <div className="mt-9 flex gap-4 w-full">
+              {data.link && (
+                <a
+                  href={data.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center 
+                  w-full
+                  px-5 py-2 rounded-lg
+                 bg-black text-white
+                 hover:bg-gray-800 transition-colors
+                 text-sm font-medium"
+                >
+                  See Code
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

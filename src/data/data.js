@@ -1,3 +1,5 @@
+import { image, title } from "motion/react-client";
+
 export const skillSet = {
   frontEnd: [
     "HTML 5",
@@ -15,25 +17,29 @@ export const projects = [
   {
     title: "Sistem Monitoring Tugas Luar Pegawai",
     description:
-      "A web-based system for managing and monitoring employee assignments efficiently. Built with Laravel and React, featuring secure role-based access and dynamic PDF reports.",
+      "A web-based system for managing and monitoring employee assignments efficiently. Built with Express and React, featuring secure role-based access and dynamic PDF reports.",
     tech: ["Node.js", "Express", "React", "MySQL", "Socket.io"],
-    link: "#",
+    link: "https://github.com/RadFist/Monitoring-Tugas-Luar",
     images: [
-      "https://via.placeholder.com/600x400?text=Monitoring+1",
-      "https://via.placeholder.com/600x400?text=Monitoring+2",
-      "https://via.placeholder.com/600x400?text=Monitoring+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Input Data Tugas" },
+      { image: "/img/Monitoring/5.webp", title: "Detail Tugas" },
+      { image: "/img/Monitoring/7.webp", title: "List Tugas" },
+      { image: "/img/Monitoring/8.webp", title: "Form Laporan" },
+      { image: "/img/Monitoring/9.webp", title: "Manajemen Jabatan" },
     ],
   },
   {
-    title: "Personal Portfolio Website",
+    title: "Catatan Keuangan",
     description:
       "An interactive and visually appealing portfolio showcasing my projects and skills as a web developer. Designed with modern animations and responsive layouts.",
-    tech: ["React", "Framer Motion", "TailwindCSS"],
+    tech: ["Kotlin", "XML", "Android Studio"],
     link: "#",
     images: [
-      "https://via.placeholder.com/600x400?text=Portfolio+1",
-      "https://via.placeholder.com/600x400?text=Portfolio+2",
-      "https://via.placeholder.com/600x400?text=Portfolio+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
     ],
   },
   {
@@ -43,9 +49,9 @@ export const projects = [
     tech: ["Next.js", "Axios", "Recharts"],
     link: "#",
     images: [
-      "https://via.placeholder.com/600x400?text=Dashboard+1",
-      "https://via.placeholder.com/600x400?text=Dashboard+2",
-      "https://via.placeholder.com/600x400?text=Dashboard+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
     ],
   },
   {
@@ -55,9 +61,9 @@ export const projects = [
     tech: ["Node.js", "Express", "React", "MongoDB"],
     link: "#",
     images: [
-      "https://via.placeholder.com/600x400?text=Task+1",
-      "https://via.placeholder.com/600x400?text=Task+2",
-      "https://via.placeholder.com/600x400?text=Task+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
     ],
   },
   {
@@ -67,9 +73,9 @@ export const projects = [
     tech: ["Laravel", "Vue.js", "MySQL"],
     link: "#",
     images: [
-      "https://via.placeholder.com/600x400?text=Ecommerce+1",
-      "https://via.placeholder.com/600x400?text=Ecommerce+2",
-      "https://via.placeholder.com/600x400?text=Ecommerce+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
     ],
   },
   {
@@ -79,9 +85,9 @@ export const projects = [
     tech: ["React", "Socket.io", "Node.js"],
     link: "#",
     images: [
-      "https://via.placeholder.com/600x400?text=Chat+1",
-      "https://via.placeholder.com/600x400?text=Chat+2",
-      "https://via.placeholder.com/600x400?text=Chat+3",
+      { image: "/img/Monitoring/1.webp", title: "Login Page" },
+      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
+      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
     ],
   },
 ];
