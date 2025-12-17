@@ -3,128 +3,129 @@ import { useState, useEffect } from "react";
 export default function ProjectModal({ data, isOpen, close }) {
   const dummyImages = [
     {
-      image: "https://via.placeholder.com/600x400?text=Image+1",
+      image: "https://via.placeholder.com/600x400?text=Preview",
       title: "Preview Image",
     },
   ];
 
-  // Pakai gambar dari project atau dummy
-  const images = data?.images?.length > 0 ? data.images : dummyImages;
-
+  const images = data?.images?.length ? data.images : dummyImages;
   const [index, setIndex] = useState(0);
 
-  // Reset slide ke 0 setiap kali modal buka project baru
   useEffect(() => {
     if (isOpen) setIndex(0);
   }, [isOpen, data]);
 
-  const next = () => {
-    setIndex((prev) => (prev + 1) % images.length);
-  };
+  if (!isOpen || !data) return null;
 
-  const prev = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  if (!isOpen || !data) return null; // aman dari error
+  const next = () => setIndex((i) => (i + 1) % images.length);
+  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
 
   return (
     <div
-      className="fixed inset-0 backdrop-blur-md bg-black/40 flex items-center justify-center z-50 p-6"
-      onClick={(e) => {
-        close(e);
-      }}
+      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-end md:items-center justify-center"
+      onClick={close}
     >
+      {/* Modal */}
       <div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-5xl p-6 relative animate-fadeIn"
         onClick={(e) => e.stopPropagation()}
+        className="
+          bg-white w-full md:max-w-5xl
+          h-[90vh] md:h-auto
+          rounded-t-2xl md:rounded-2xl
+          overflow-y-auto
+          relative
+        "
       >
-        {/* Close Button */}
+        {/* Close */}
         <button
-          onClick={(e) => close(e)}
-          className="  absolute top-3 right-3 text-gray-600
-           hover:text-black text-2xl font-bold z-10
-           bg-gray-200 rounded-full
-           w-8 h-8 flex items-center justify-center
-           md:bg-transparent md:rounded-none md:w-auto md:h-auto md:flex-none"
+          onClick={close}
+          className="
+            absolute top-3 right-3 z-20
+            bg-black/70 text-white
+            w-9 h-9 rounded-full
+            flex items-center justify-center
+            text-lg
+          "
         >
           ✕
         </button>
 
-        {/* 2 Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* LEFT — IMAGE + CAROUSEL */}
+        {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6">
+          {/* IMAGE */}
           <div>
-            <div className="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="relative w-full h-56 sm:h-64 md:h-80 bg-gray-100 rounded-xl overflow-hidden">
               <img
                 src={images[index].image}
                 alt={images[index].title}
                 className="w-full h-full object-contain"
               />
 
-              {/* Prev Button */}
-              <button
-                onClick={prev}
-                className="absolute left-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
-              >
-                ‹
-              </button>
-
-              {/* Next Button */}
-              <button
-                onClick={next}
-                className="absolute right-3 bg-black/40 text-white px-3 py-2 rounded-full text-xl"
-              >
-                ›
-              </button>
+              {images.length > 1 && (
+                <>
+                  <button
+                    onClick={prev}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    onClick={next}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white w-8 h-8 rounded-full"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
             </div>
 
-            <div className="flex items-center justify-center text-black pt-1">
-              <p className="text-center text-sm text-gray-600 mt-2">
-                {images[index].title}
-              </p>
-            </div>
+            <p className="text-center text-xs text-gray-500 mt-2">
+              {images[index].title}
+            </p>
           </div>
 
-          {/* RIGHT — TEXT */}
+          {/* TEXT */}
           <div className="flex flex-col">
-            <h2 className="text-3xl font-bold text-black mb-3">{data.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+              {data.title}
+            </h2>
 
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
               {data.description}
             </p>
 
-            {/* Tech Stack */}
-            {data?.tech && (
-              <div className="flex flex-wrap gap-2">
+            {/* Tech */}
+            {data.tech && (
+              <div className="flex flex-wrap gap-2 mb-6">
                 {data.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border"
+                    className="px-3 py-1 text-xs sm:text-sm bg-gray-100 border rounded-full text-gray-700"
                   >
                     {t}
                   </span>
                 ))}
               </div>
             )}
-            {/* Link Buttons */}
-            <div className="mt-9 flex gap-4 w-full">
-              {data.link && (
-                <a
-                  href={data.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center 
+
+            {/* Action */}
+            {data.link && (
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  mt-auto
                   w-full
-                  px-5 py-2 rounded-lg
-                 bg-black text-white
-                 hover:bg-gray-800 transition-colors
-                 text-sm font-medium"
-                >
-                  See Code
-                </a>
-              )}
-            </div>
+                  bg-black text-white
+                  py-3 rounded-lg
+                  text-center text-sm font-medium
+                  hover:bg-gray-800 transition
+                "
+              >
+                See Code
+              </a>
+            )}
           </div>
         </div>
       </div>

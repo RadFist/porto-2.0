@@ -13,6 +13,7 @@ const Project = () => {
     setSelectedProject(proj);
     setIsOpen(true);
   }
+
   function handlerCloseModal(e) {
     e.preventDefault();
     setIsOpen(false);
@@ -21,12 +22,13 @@ const Project = () => {
 
   return (
     <Layout>
-      <section className="relative min-h-screen overflow-hidden flex flex-col items-center text-white px-6 py-20">
+      <section className="relative min-h-screen flex flex-col items-center text-white px-4 sm:px-6 py-16 sm:py-20">
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold mb-12 text-center z-10"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center"
         >
           My <span className="text-blue-200">Projects</span>
         </motion.h1>
@@ -37,16 +39,15 @@ const Project = () => {
           close={handlerCloseModal}
         />
 
+        {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full z-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 max-w-7xl w-full"
           initial="hidden"
           animate="show"
           variants={{
             hidden: {},
             show: {
-              transition: {
-                staggerChildren: 0.4,
-              },
+              transition: { staggerChildren: 0.25 },
             },
           }}
         >
@@ -54,21 +55,31 @@ const Project = () => {
             <motion.div
               key={index}
               variants={{
-                hidden: { opacity: 0, y: 40 },
+                hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0 },
               }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 flex flex-col justify-between"
+              className="
+                bg-white/10 backdrop-blur-md border border-white/20
+                rounded-2xl p-4 sm:p-6
+                flex flex-col justify-between
+                transition-all duration-300
+                md:hover:shadow-xl md:hover:scale-[1.04]
+              "
             >
               <div>
-                <h2 className="text-2xl font-semibold mb-3">{proj.title}</h2>
-                <p className="text-sm text-gray-200 mb-5 leading-relaxed">
+                <h2 className="text-lg sm:text-xl font-semibold mb-2">
+                  {proj.title}
+                </h2>
+
+                <p className="text-xs sm:text-sm text-gray-200 mb-4 leading-relaxed">
                   {proj.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+
+                <div className="flex flex-wrap gap-2 mb-5">
                   {proj.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-white/20 text-sm px-3 py-1 rounded-full"
+                      className="bg-white/20 text-[11px] sm:text-sm px-3 py-1 rounded-full"
                     >
                       {tech}
                     </span>
@@ -76,12 +87,17 @@ const Project = () => {
                 </div>
               </div>
 
+              {/* Action */}
               <button
-                href={proj.link}
                 onClick={(e) => handlerShowModal(e, proj)}
-                className="text-purple-200 hover:text-white underline font-medium transition-colors duration-200"
+                className="
+                  self-start text-sm sm:text-base
+                  text-purple-200 hover:text-white
+                  font-medium underline underline-offset-4
+                  transition-colors
+                "
               >
-                Detail →
+                View Detail →
               </button>
             </motion.div>
           ))}
