@@ -17,7 +17,7 @@ export const projects = [
   {
     title: "Sistem Monitoring Tugas Luar Pegawai",
     description:
-      "A web-based system for managing and monitoring employee assignments efficiently. Built with Express and React, featuring secure role-based access and dynamic PDF reports.",
+      "sistem berbasis web yang dirancang untuk memantau dan mengelola kegiatan pegawai saat melakukan tugas di luar kantor. Sistem ini membantu pihak manajemen atau atasan untuk mengetahui status, lokasi, dan progres tugas yang dilakukan pegawai secara real-time, sehingga pengawasan menjadi lebih efisien dan akurat.",
     tech: ["Node.js", "Express", "React", "MySQL", "Socket.io"],
     link: "https://github.com/RadFist/Monitoring-Tugas-Luar",
     images: [
@@ -43,15 +43,29 @@ export const projects = [
     ],
   },
   {
-    title: "API Integration Dashboard",
+    title: "Warehouse Management System",
     description:
-      "A data visualization dashboard integrating multiple APIs using Axios, presenting analytics and performance metrics with Recharts.",
-    tech: ["Next.js", "Axios", "Recharts"],
+      "adalah sebuah sistem perangkat lunak yang dirancang untuk mengelola dan mengoptimalkan operasi gudang atau pusat distribusi secara efisien. Sistem ini membantu perusahaan dalam mengatur aliran barang masuk (inbound), penyimpanan, pengelolaan stok, hingga pengeluaran barang (outbound) dengan lebih terstruktur dan akurat.",
+    tech: ["CI3", "AJAX", "Boostrap5", "Mysql"],
     link: "#",
     images: [
-      { image: "/img/Monitoring/1.webp", title: "Login Page" },
-      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
-      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
+      { image: "/img/wms/login.webp", title: "Login Page" },
+      { image: "/img/wms/dashboard.webp", title: "Dashboard" },
+      { image: "/img/wms/master data item.webp", title: "master data item" },
+      {
+        image: "/img/wms/master data location.webp",
+        title: "master data location",
+      },
+      { image: "/img/wms/master data user.webp", title: "master data user" },
+      { image: "/img/wms/data inventory.webp", title: "data inventoriy" },
+      { image: "/img/wms/inventori.webp", title: "inventoriy" },
+      { image: "/img/wms/data shipment.webp", title: "Data Shipment" },
+      { image: "/img/wms/order management.webp", title: "order management" },
+      { image: "/img/wms/receipt entries.webp", title: "receipt entries" },
+      { image: "/img/wms/receipt list.webp", title: "receipt list" },
+      { image: "/img/wms/wave cycle.webp", title: "wave cycle" },
+      { image: "/img/wms/cross aplication.webp", title: "cross aplication" },
+      { image: "/img/wms/authority.webp", title: "authority" },
     ],
   },
   {

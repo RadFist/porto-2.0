@@ -6,7 +6,7 @@ const GoogleMaps = ({ locationParam = "tangerang" }) => {
   const encoded = encodeURIComponent(locationParam);
   const url = `https://www.google.com/maps?q=${encoded}&output=embed`;
   return (
-    <div className="relative  overflow-hidden rounded-lg p-2 ">
+    <div className="relative  rounded-lg p-2 ">
       {/* Loading Overlay */}
       {isLoading && (
         <motion.div
@@ -31,7 +31,7 @@ const GoogleMaps = ({ locationParam = "tangerang" }) => {
       <iframe
         src={url}
         width="100%"
-        height="400"
+        height="330"
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

@@ -17,7 +17,10 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-20 text-white">
+      <section
+        style={{ minHeight: "0vh" }}
+        className="relative flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-10 text-white"
+      >
         {/* Background */}
         <div className="absolute inset-0 bg-linear-to-br from-[#1e0b47] via-[#2d0b63] to-[#3b0764] opacity-90 -z-10" />
         <div className="absolute inset-0 bg-[url('/src/assets/img/Space-Background.webp')] bg-cover bg-center opacity-25 -z-20" />
@@ -103,7 +106,7 @@ const Contact = () => {
             Availability
           </h2>
 
-          <div className="rounded-lg overflow-hidden shadow-[0_0_25px_rgba(168,85,247,0.4)] mb-6 border border-[rgba(147,197,253,0.3)] h-64 sm:h-80">
+          <div className="rounded-lg  shadow-[0_0_25px_rgba(168,85,247,0.4)] mb-6 border border-[rgba(147,197,253,0.3)] ">
             <GoogleMaps locationParams="kab tangerang" />
           </div>
 

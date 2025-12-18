@@ -3,7 +3,10 @@ import Layout from "../layout/layout";
 const About = () => {
   return (
     <Layout>
-      <section className="min-h-screen flex flex-col items-center justify-center px-4 py-10 pt-16 text-gray-100">
+      <section
+        style={{ minHeight: "30vh" }}
+        className="flex flex-col items-center justify-center px-4  pt-10 text-gray-100"
+      >
         {/* ================= ABOUT CARD ================= */}
         <div
           className="w-full max-w-4xl

@@ -85,14 +85,14 @@ export default function ProjectModal({ data, isOpen, close }) {
                     <button
                       onClick={prev}
                       className="
-    absolute left-2 top-1/2 -translate-y-1/2
-    z-10
-    bg-black/60 hover:bg-black/80
-    text-white
-    w-9 h-9
-    rounded-full
-    flex items-center justify-center
-  "
+                    absolute left-2 top-1/2 -translate-y-1/2
+                    z-10
+                    bg-black/60 hover:bg-black/80
+                    text-white
+                    w-9 h-9
+                    rounded-full
+                    flex items-center justify-center
+                  "
                     >
                       {"<"}
                     </button>
@@ -109,7 +109,7 @@ export default function ProjectModal({ data, isOpen, close }) {
                         transition
                       "
                     >
-                          {">"}
+                      {">"}
                     </button>
                   </>
                 )}

@@ -18,7 +18,10 @@ const Index = () => {
   return (
     <Layout>
       {/* ================= HERO SECTION ================= */}
-      <section className="min-h-screen flex justify-center items-center px-4 py-10 sm:px-6 md:px-10">
+      <section
+        style={{ minHeight: "90vh" }}
+        className="flex justify-center items-center px-4 sm:px-6 md:px-10"
+      >
         <motion.div
           className="
             rounded-xl
