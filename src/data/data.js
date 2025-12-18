@@ -71,27 +71,30 @@ export const projects = [
     ],
   },
   {
-    title: "Task Management App",
+    title: "Inventory Toko Roti",
     description:
-      "A minimalist task management application to organize and track personal productivity. Includes authentication and real-time updates.",
-    tech: ["Node.js", "Express", "React", "MongoDB"],
+      "Sistem manajemen persediaan toko roti yang menerapkan metode FIFO (First In, First Out) untuk mengelola stok bahan dan produk secara efektif dan akurat.",
+    tech: ["PHP", "Data Table", "MySQL", "Boostrap5"],
     link: "#",
     images: [
-      { image: "/img/Monitoring/1.webp", title: "Login Page" },
-      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
-      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
-    ],
-  },
-  {
-    title: "E-Commerce Admin Panel",
-    description:
-      "An admin dashboard for managing products, orders, and users in an online store with clean UI and secure CRUD operations.",
-    tech: ["Laravel", "Vue.js", "MySQL"],
-    link: "#",
-    images: [
-      { image: "/img/Monitoring/1.webp", title: "Login Page" },
-      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
-      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
+      { image: "/img/FIFO/login.webp", title: "Login Page" },
+      { image: "/img/FIFO/regist.webp", title: "Registration Page" },
+      { image: "/img/FIFO/dashboard.webp", title: "Dahsboard" },
+      { image: "/img/FIFO/karyawan.webp", title: "List Karyawan" },
+      { image: "/img/FIFO/inputKaryawan.webp", title: "Input Data Karyawan" },
+      { image: "/img/FIFO/supplier.webp", title: "List Supplier" },
+      { image: "/img/FIFO/inputSupplier.webp", title: "Input Data Supplier" },
+      { image: "/img/FIFO/kategori.webp", title: "Kategori" },
+      { image: "/img/FIFO/inputKategori.webp", title: "Input Data kategori" },
+      { image: "/img/FIFO/product.webp", title: "List Product" },
+      { image: "/img/FIFO/StockIn.webp", title: "Stok Masuk Bahan" },
+      {
+        image: "/img/FIFO/inputStockIn.webp",
+        title: "Input Data Stok Masuk Bahan",
+      },
+
+      { image: "/img/FIFO/transaksi.webp", title: "Transaksi" },
+      { image: "/img/FIFO/rekapData.webp", title: "Rekap Data" },
     ],
   },
 ];
