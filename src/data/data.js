@@ -45,7 +45,7 @@ export const projects = [
   {
     title: "Warehouse Management System",
     description:
-      "adalah sebuah sistem perangkat lunak yang dirancang untuk mengelola dan mengoptimalkan operasi gudang atau pusat distribusi secara efisien. Sistem ini membantu perusahaan dalam mengatur aliran barang masuk (inbound), penyimpanan, pengelolaan stok, hingga pengeluaran barang (outbound) dengan lebih terstruktur dan akurat.",
+      "Sebuah sistem perangkat lunak yang dirancang untuk mengelola dan mengoptimalkan operasi gudang atau pusat distribusi secara efisien. Sistem ini membantu perusahaan dalam mengatur aliran barang masuk (inbound), penyimpanan, pengelolaan stok, hingga pengeluaran barang (outbound) dengan lebih terstruktur dan akurat.",
     tech: ["CI3", "AJAX", "Boostrap5", "Mysql"],
     link: "#",
     images: [
