@@ -73,8 +73,8 @@ const Header = () => {
                     {menu.icon}
                     <motion.span
                       variants={textVariants}
-                      initial={isActive(menu.to) ? "active" : "initial"}
-                      animate={isActive(menu.to) ? "active" : "initial"}
+                      // initial={isActive(menu.to) ? "active" : "initial"}
+                      // animate={isActive(menu.to) ? "active" : "initial"}
                     >
                       {menu.label}
                     </motion.span>

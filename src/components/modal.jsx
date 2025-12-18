@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { Github } from "lucide-react";
 
 export default function ProjectModal({ data, isOpen, close }) {
   const dummyImages = [
@@ -123,11 +123,9 @@ export default function ProjectModal({ data, isOpen, close }) {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                 {data.title}
               </h3>
-
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 {data.description}
               </p>
-
               {data.tech && (
                 <div className="flex flex-wrap gap-2 mb-6">
                   {data.tech.map((t, i) => (
@@ -140,21 +138,43 @@ export default function ProjectModal({ data, isOpen, close }) {
                   ))}
                 </div>
               )}
-
-              {data.link && (
+              {data.link === "Forbiden" ? (
+                <button
+                  disabled
+                  className="
+                     mt-auto
+                     w-full
+                     bg-gray-300
+                     text-gray-500
+                     py-3
+                     rounded-lg
+                     text-center
+                     text-sm
+                     font-medium
+                     opacity-70
+                   "
+                  style={{ cursor: "no-drop" }}
+                >
+                  Sorry, Code Forbidden!
+                </button>
+              ) : (
                 <a
                   href={data.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    mt-auto
-                    w-full
-                    bg-black text-white
-                    py-3 rounded-lg
-                    text-center text-sm font-medium
-                    hover:bg-gray-800 transition
-                  "
+                  mt-auto
+                  w-full
+                  bg-black text-white
+                  py-3 rounded-lg
+                  text-center text-sm font-medium
+                  hover:bg-gray-800 transition
+                  flex
+                  justify-center
+                  gap-2
+                "
                 >
+                  <Github size={18} />
                   See Code
                 </a>
               )}

@@ -35,7 +35,7 @@ export const projects = [
     description:
       "Sebuah aplikasi berbasis Android yang dirancang untuk membantu pengguna mencatat, memantau, dan mengelola keuangan pribadi secara sederhana dan praktis. Aplikasi ini memudahkan pengguna dalam mengetahui aliran masuk dan keluar uang, sehingga dapat membuat perencanaan keuangan yang lebih baik.",
     tech: ["Kotlin", "XML", "Android Studio"],
-    link: "#",
+    link: "https://github.com/RadFist/Monney_Management",
     images: [
       { image: "/img/Keuangan/homePage.webp", title: "Home Page" },
       { image: "/img/Keuangan/inputPage.webp", title: "Input Data" },
@@ -49,7 +49,7 @@ export const projects = [
     description:
       "Sebuah sistem perangkat lunak yang dirancang untuk mengelola dan mengoptimalkan operasi gudang atau pusat distribusi secara efisien. Sistem ini membantu perusahaan dalam mengatur aliran barang masuk (inbound), penyimpanan, pengelolaan stok, hingga pengeluaran barang (outbound) dengan lebih terstruktur dan akurat.",
     tech: ["CI3", "AJAX", "Boostrap5", "Mysql"],
-    link: "#",
+    link: "Forbiden",
     images: [
       { image: "/img/wms/login.webp", title: "Login Page" },
       { image: "/img/wms/dashboard.webp", title: "Dashboard" },
@@ -75,7 +75,7 @@ export const projects = [
     description:
       "Sistem manajemen persediaan toko roti yang menerapkan metode FIFO (First In, First Out) untuk mengelola stok bahan dan produk secara efektif dan akurat.",
     tech: ["PHP", "Data Table", "MySQL", "Boostrap5"],
-    link: "#",
+    link: "https://github.com/RadFist/InventoryFIFO",
     images: [
       { image: "/img/FIFO/login.webp", title: "Login Page" },
       { image: "/img/FIFO/regist.webp", title: "Registration Page" },
