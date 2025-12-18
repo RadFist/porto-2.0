@@ -38,7 +38,7 @@ export const projects = [
     link: "#",
     images: [
       { image: "/img/Keuangan/homePage.webp", title: "Home Page" },
-      { image: "/img/Keuangan/inputData.webp", title: "Input Data" },
+      { image: "/img/Keuangan/inputPage.webp", title: "Input Data" },
       { image: "/img/Keuangan/pieChart.webp", title: "Pie Chart" },
       { image: "/img/Keuangan/barChart.webp", title: "Bar Chart" },
       { image: "/img/Keuangan/lineChart.webp", title: "line Chart" },
