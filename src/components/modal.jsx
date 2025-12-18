@@ -35,13 +35,12 @@ export default function ProjectModal({ data, isOpen, close }) {
         onClick={(e) => e.stopPropagation()}
         className="
           bg-white w-full md:max-w-5xl
-          max-h-100dvh md:max-h-[90vh]
           rounded-t-2xl md:rounded-2xl
           flex flex-col
-          overflow-hidden
+          overflow-y-scroll
         "
+        style={{ maxHeight: "700px" }}
       >
-        {/* HEADER — TIDAK IKUT SCROLL */}
         <div className="relative p-4 border-b shrink-0  top-0 bg-white z-10">
           <h2 className="text-base font-semibold text-gray-800 md:hidden">
             Project Detail
@@ -61,7 +60,6 @@ export default function ProjectModal({ data, isOpen, close }) {
           </button>
         </div>
 
-        {/* BODY — INI YANG SCROLL */}
         <div
           className="
             flex-1
