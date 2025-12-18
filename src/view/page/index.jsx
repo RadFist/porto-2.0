@@ -80,13 +80,12 @@ const Index = () => {
             <div className="w-full border-b border-dashed border-[rgba(255,255,255,0.3)]" />
 
             <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed">
-              A passionate developer who loves crafting beautiful, functional,
-              and efficient web applications using modern technologies. I enjoy
-              turning ideas into reality through clean code, responsive design,
-              and optimized performance. With a strong focus on both user
-              experience and backend logic, I constantly strive to build
-              seamless digital experiences that not only work great but also
-              look stunning.
+              Seorang Web Dev yang penuh semangat dan gemar menciptakan aplikasi
+              web yangg fungsional dan efisien menggunakan teknologi modern.
+              Saya menikmati proses mengubah ide menjadi kenyataan melalui kode
+              yang bersih, desain responsif, dan kinerja yang optimal. Dengan
+              fokus kuat pada pengalaman pengguna sekaligus logika backend, saya
+              selalu berusaha membangun pengalaman digital yang seamless.
             </p>
           </div>
 

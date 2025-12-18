@@ -37,11 +37,11 @@ export const projects = [
     tech: ["Kotlin", "XML", "Android Studio"],
     link: "#",
     images: [
-      { image: "/img/Keuangan/homePage.jpg", title: "Home Page" },
-      { image: "/img/Keuangan/inputData.jpg", title: "Input Data" },
-      { image: "/img/Keuangan/pieChart.jpg", title: "Pie Chart" },
-      { image: "/img/Keuangan/barChart.jpg", title: "Bar Chart" },
-      { image: "/img/Keuangan/lineChart.jpg", title: "line Chart" },
+      { image: "/img/Keuangan/homePage.webp", title: "Home Page" },
+      { image: "/img/Keuangan/inputData.webp", title: "Input Data" },
+      { image: "/img/Keuangan/pieChart.webp", title: "Pie Chart" },
+      { image: "/img/Keuangan/barChart.webp", title: "Bar Chart" },
+      { image: "/img/Keuangan/lineChart.webp", title: "line Chart" },
     ],
   },
   {
