@@ -39,7 +39,7 @@ export default function ProjectModal({ data, isOpen, close }) {
           flex flex-col
           overflow-y-scroll
         "
-        style={{ maxHeight: "700px" }}
+        style={{ maxHeight: "70vh" }}
       >
         <div className="relative p-4 border-b shrink-0  top-0 bg-white z-10">
           <h2 className="text-base font-semibold text-gray-800 md:hidden">
