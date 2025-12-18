@@ -33,13 +33,15 @@ export const projects = [
   {
     title: "Catatan Keuangan",
     description:
-      "An interactive and visually appealing portfolio showcasing my projects and skills as a web developer. Designed with modern animations and responsive layouts.",
+      "Sebuah aplikasi berbasis Android yang dirancang untuk membantu pengguna mencatat, memantau, dan mengelola keuangan pribadi secara sederhana dan praktis. Aplikasi ini memudahkan pengguna dalam mengetahui aliran masuk dan keluar uang, sehingga dapat membuat perencanaan keuangan yang lebih baik.",
     tech: ["Kotlin", "XML", "Android Studio"],
     link: "#",
     images: [
-      { image: "/img/Monitoring/1.webp", title: "Login Page" },
-      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
-      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
+      { image: "/img/Keuangan/homePage.jpg", title: "Home Page" },
+      { image: "/img/Keuangan/inputData.jpg", title: "Input Data" },
+      { image: "/img/Keuangan/pieChart.jpg", title: "Pie Chart" },
+      { image: "/img/Keuangan/barChart.jpg", title: "Bar Chart" },
+      { image: "/img/Keuangan/lineChart.jpg", title: "line Chart" },
     ],
   },
   {
@@ -85,18 +87,6 @@ export const projects = [
     description:
       "An admin dashboard for managing products, orders, and users in an online store with clean UI and secure CRUD operations.",
     tech: ["Laravel", "Vue.js", "MySQL"],
-    link: "#",
-    images: [
-      { image: "/img/Monitoring/1.webp", title: "Login Page" },
-      { image: "/img/Monitoring/2.webp", title: "Dashboard" },
-      { image: "/img/Monitoring/3.webp", title: "Data Tugas Luar" },
-    ],
-  },
-  {
-    title: "Chat Application",
-    description:
-      "A real-time chat app with private and group messaging features, using WebSocket for instant communication.",
-    tech: ["React", "Socket.io", "Node.js"],
     link: "#",
     images: [
       { image: "/img/Monitoring/1.webp", title: "Login Page" },
