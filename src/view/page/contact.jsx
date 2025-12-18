@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <Layout>
       <section
-        style={{ minHeight: "0vh" }}
+        style={{ minHeight: "90vh" }}
         className="relative flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-10 text-white"
       >
         {/* Background */}

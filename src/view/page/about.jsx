@@ -5,7 +5,7 @@ const About = () => {
     <Layout>
       <section
         style={{ minHeight: "30vh" }}
-        className="flex flex-col items-center justify-center px-4  pt-10 text-gray-100"
+        className="flex flex-col items-center justify-center px-4 pb-10 pt-10 text-gray-100"
       >
         {/* ================= ABOUT CARD ================= */}
         <div
